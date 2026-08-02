@@ -136,6 +136,10 @@ alter task order_task resume;
 
  create role db_analyst;
 
+-- use this role
+
+use role db_analyst;
+
  grant select on customer_summary to role db_analyst;
  
 -- grant role db_analyst to user SHANKAR9663;
