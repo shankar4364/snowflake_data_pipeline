@@ -101,13 +101,18 @@ JOIN orders o
 ON c.customer_id = o.customer_id
 GROUP BY c.customer_id, c.name, c.city;
 
+-- after creating task to refresh the task 
+
+alter task order_task resume;
+
+-- to suspend the task
+
+alter task order_task suspend;
+
 -- snowflake automatically run the query 
 -- read the data
 -- saves updated data
 -- keep data upated
-
-
-alter task order_task resume;
 
 -- create materialized view 
 -- precomputed query 
